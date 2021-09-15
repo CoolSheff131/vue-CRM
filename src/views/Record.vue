@@ -1,19 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="index.css">
-  <title>Document</title>
-</head>
-
-
-<body>
-<div>
+<template>
   <div class="app-main-layout">
     <nav class="navbar orange lighten-1">
       <div class="nav-wrapper">
@@ -74,27 +59,68 @@
     <main class="app-content">
       <div class="app-page">
 
-
 <div>
   <div class="page-title">
-    <h3>Планирование</h3>
-    <h4>12 212</h4>
+    <h3>Новая запись</h3>
   </div>
 
-  <section>
-    <div>
-      <p>
-        <strong>Девушка:</strong>
-        12 122 из 14 0000
-      </p>
-      <div class="progress" >
-        <div
-            class="determinate green"
-            style="width:40%"
-        ></div>
-      </div>
+  <form class="form">
+    <div class="input-field" >
+      <select>
+        <option
+        >name cat</option>
+      </select>
+      <label>Выберите категорию</label>
     </div>
-  </section>
+
+    <p>
+      <label>
+        <input
+            class="with-gap"
+            name="type"
+            type="radio"
+            value="income"
+        />
+        <span>Доход</span>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        <input
+            class="with-gap"
+            name="type"
+            type="radio"
+            value="outcome"
+        />
+        <span>Расход</span>
+      </label>
+    </p>
+
+    <div class="input-field">
+      <input
+          id="amount"
+          type="number"
+      >
+      <label for="amount">Сумма</label>
+      <span class="helper-text invalid">amount пароль</span>
+    </div>
+
+    <div class="input-field">
+      <input
+          id="description"
+          type="text"
+      >
+      <label for="description">Описание</label>
+      <span
+            class="helper-text invalid">description пароль</span>
+    </div>
+
+    <button class="btn waves-effect waves-light" type="submit">
+      Создать
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
 </div>
 
 </div>
@@ -105,11 +131,5 @@
     <i class="large material-icons">add</i>
   </a>
 </div>
-</div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-</html>
-
-
+  </div>
+</template>

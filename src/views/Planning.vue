@@ -1,19 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="index.css">
-  <title>Document</title>
-</head>
-
-
-<body>
-<div>
+<template>
   <div class="app-main-layout">
     <nav class="navbar orange lighten-1">
       <div class="nav-wrapper">
@@ -74,55 +59,27 @@
     <main class="app-content">
       <div class="app-page">
 
+
 <div>
   <div class="page-title">
-    <h3>Счет</h3>
-
-    <button class="btn waves-effect waves-light btn-small">
-      <i class="material-icons">refresh</i>
-    </button>
+    <h3>Планирование</h3>
+    <h4>12 212</h4>
   </div>
 
-  <div class="row">
-    <div class="col s12 m6 l4">
-      <div class="card light-blue bill-card">
-        <div class="card-content white-text">
-          <span class="card-title">Счет в валюте</span>
-
-          <p class="currency-line">
-            <span>12.0 Р</span>
-          </p>
-        </div>
+  <section>
+    <div>
+      <p>
+        <strong>Девушка:</strong>
+        12 122 из 14 0000
+      </p>
+      <div class="progress" >
+        <div
+            class="determinate green"
+            style="width:40%"
+        ></div>
       </div>
     </div>
-
-    <div class="col s12 m6 l8">
-      <div class="card orange darken-3 bill-card">
-        <div class="card-content white-text">
-          <div class="card-header">
-            <span class="card-title">Курс валют</span>
-          </div>
-          <table>
-            <thead>
-            <tr>
-              <th>Валюта</th>
-              <th>Курс</th>
-              <th>Дата</th>
-            </tr>
-            </thead>
-
-            <tbody>
-            <tr>
-              <td>руб</td>
-              <td>12121</td>
-              <td>12.12.12</td>
-            </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
+  </section>
 </div>
 
 </div>
@@ -133,10 +90,5 @@
     <i class="large material-icons">add</i>
   </a>
 </div>
-</div>
-</div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
-</html>
-
+  </div>
+</template>
