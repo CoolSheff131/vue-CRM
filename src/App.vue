@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import EmptyLayout from '@/layouts/EmptyLayout'
-import MainLayout from '@/layouts/MainLayout'
+import EmptyLayout from '/src/layouts/EmptyLayout'
+import MainLayout from '/src/layouts/MainLayout'
 export default {
   computed: {
     layout(){      
