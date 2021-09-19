@@ -7,8 +7,8 @@ import dateFilter from '@/filters/date.filter'
 import messagePlugin from '@/utils/message.plugin'
 import './registerServiceWorker'
 import 'materialize-css/dist/js/materialize.min'
-import firebase from 'firebase/app'
-import 'firebase/auth'
+import { initializeApp } from "firebase/app";
+import {getAuth} from 'firebase/auth'
 import 'firebase/database'
 
 Vue.config.productionTip = false
@@ -16,7 +16,7 @@ Vue.use(messagePlugin)
 Vue.use(Vuelidate)
 Vue.filter('date', dateFilter)
 
-firebase.initializeApp({
+initializeApp({
   apiKey: "AIzaSyCBBr_0H7Ld9P6s33JUUBpBwg3aGIAWRzs",
   authDomain: "vue-crm-52f38.firebaseapp.com",
   projectId: "vue-crm-52f38",
@@ -28,7 +28,7 @@ firebase.initializeApp({
 
 let app
 
-firebase.auth().onAuthStateChanged(()=>{
+getAuth().onAuthStateChanged(()=>{
   if(!app){
     app = new Vue({
       router,
