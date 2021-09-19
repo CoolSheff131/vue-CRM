@@ -80,10 +80,11 @@ export default {
         email: this.email,
         password: this.password
       }
-      try {
-        await this.$store.dispatch('login',formData)       
-        this.$router.push('/')        
-      } catch (error) { }
+      try {        
+        await this.$store.dispatch('login',formData)               
+        // this.$router.push('/')        
+      } catch (error) { console.log(error);}
+      this.$router.push('/')        
     }
   }
 

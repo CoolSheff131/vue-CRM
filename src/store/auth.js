@@ -1,14 +1,34 @@
-import {getAuth, signInWithEmailAndPassword } from "firebase/auth"
+import {getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword } from "firebase/auth"
+
+
 
 export default {
   actions:{
-    async login({email,password }){
+    async login({dispatch, commit},{email,password }){
       try{
-        const auth = getAuth();
-        await signInWithEmailAndPassword(auth,email, password)
+        await firebase.auth().signInWithEmailAndPassword(email,password)
       }catch(e){
         throw e
       }
     }
+  },
+  async register({dispatch},{email,password,name}){
+    try{
+      await firebase.auth().createUserWithEmailAndPassword(email,password)
+      const uid = await dispatch('getUid')
+      await firebase.database().ref(`/users/${uid}/info`).set({
+        bill: 10000,
+        name
+      })
+    }catch(e){
+      throw e
+    }
+  },
+  getuUid(){
+    const user = firebase.auth().currentUser
+    return user? user.uid : null
+  },
+  async logout(){
+    await getAuth().signOut()
   }
 }
