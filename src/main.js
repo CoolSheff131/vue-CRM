@@ -13,7 +13,8 @@ import 'materialize-css/dist/js/materialize.min'
 import { initializeApp } from "firebase/app";
 import {getAuth} from 'firebase/auth'
 import 'firebase/database'
-
+import Paginate from 'vuejs-paginate'
+Vue.component('Paginate',Paginate)
 Vue.config.productionTip = false
 Vue.use(messagePlugin)
 Vue.use(Vuelidate)
