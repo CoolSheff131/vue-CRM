@@ -24,6 +24,9 @@
 import CategoryCreate from '@/components/CategoryCreate'
 import CategoryEdit from '@/components/CategoryEdit'
 export default {
+  metaInfo(){
+    return {title: this.$title('ProfileTitle')}
+  },
   name:'categories',
   data: ()=>({
     categories:[],
